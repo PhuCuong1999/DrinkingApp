@@ -69,6 +69,12 @@ close.addEventListener('click', ()=>{
     modal_container.classList.remove('show')
 })
 
+const exit = document.getElementById("btnExit")
+exit.addEventListener('click', function(){
+    alert('ll')
+    //window.location.href = "/";
+})
+
 /* ===================================== */
    // Create new wheel object specifying the parameters at creation time.
 var theWheel = new Winwheel({
