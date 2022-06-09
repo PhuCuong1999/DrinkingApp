@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "id": 2,
+      "link": "qs2.jpg"
+    },
+    {
+      "id": 3,
+      "link": "qs3.jpg"
+    },
+    {
+      "id": 4,
+      "link": "qs4.jpg"
+    },
+    {
+      "id": 5,
+      "link": "qs5.jpg"
+    },
+    {
+      "id": 6,
+      "link": "qs6.jpg"
+    },
+    {
+      "id": 7,
+      "link": "qs7.jpg"
+    }
+  ]
+}

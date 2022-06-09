@@ -1,0 +1,35 @@
+html(lang='en')
+	head
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet' href='/styles/playgame.css')
+		link(rel='stylesheet' href='/styles/main.css' type='text/css')
+		script(type='text/javascript' src='/js/Winwheel.js' defer='')
+		script(src='/js/jquery-3.6.0.js' defer='')
+		script(src='/js/TweenMax.min.js' defer='')
+		script(src='/js/game.js' defer='')
+		title Truth or Dare
+	body
+		.container
+			.header
+				.exit
+					button.btnExit Exit
+				.circle
+					button#btnCircle.btnCircle Circle
+			.card
+				img#question(src='/images/ava.jpg' alt='Image')
+			.play
+				button#playCard Play
+				.progress
+					.progress-done(data-done='100') 0%
+		#modal_container.modal-container
+			.modal
+				input#number(type='text' value='10')
+				#circle
+					#arrow ▼
+					table
+						tbody
+							tr
+								td.the_wheel(width='300' height='300' align='center' valign='center')
+									canvas#canvas(width='300' height='300')
+				button#btnPlay Play
+				button#btnClose Close
