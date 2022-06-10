@@ -1,4 +1,7 @@
 
+var cssClasses = ['fade-in', 'zoom-out', 'rotate-in-center', 'bounce-top', 'roll-in-left', 'flicker-in-1', 'rotate-in-diag-1', 'rotate-in-tl',
+                'slide-in-elliptic-bottom-bck', 'shake-bl']
+
 var image = document.getElementById("question")
 var getNewImage = function(){
 
@@ -33,7 +36,8 @@ var getNewImage = function(){
         }
     }).done(function(result) {
         image.setAttribute('src', '/images/' + result.data.link)
-        image.setAttribute('class', 'bounce-top')
+        let item = cssClasses[Math.floor(Math.random()*cssClasses.length)];
+        image.setAttribute('class', item)
     })
 
 }
@@ -77,23 +81,31 @@ exit.addEventListener('click', function(){
 /* ===================================== */
    // Create new wheel object specifying the parameters at creation time.
 var theWheel = new Winwheel({
-    'numSegments'  : 8,     // Specify number of segments.
+    'numSegments'  : 10,     // Specify number of segments.
     'outerRadius'  : 120,   // Set outer radius so wheel fits inside the background.
     'textFontSize' : 10,    // Set font size as desired.
     'segments'     :        // Define segments including colour and text.
     [
-    {'fillStyle' : '#eae56f', 'text' : 'Prize 1'},
-    {'fillStyle' : '#89f26e', 'text' : 'Prize 2'},
-    {'fillStyle' : '#7de6ef', 'text' : 'Prize 3'},
-    {'fillStyle' : '#e7706f', 'text' : 'Prize 4'},
-    {'fillStyle' : '#eae56f', 'text' : 'Prize 5'},
-    {'fillStyle' : '#89f26e', 'text' : 'Prize 6'},
-    {'fillStyle' : '#7de6ef', 'text' : 'Prize 7'},
-    {'fillStyle' : '#e7706f', 'text' : 'Prize 8'},
-    {'fillStyle' : '#e7706f', 'text' : 'Prize 9'},
-    {'fillStyle' : '#eae56f', 'text' : 'Prize 10'},
-    {'fillStyle' : '#89f26e', 'text' : 'Prize 11'},
-    {'fillStyle' : '#7de6ef', 'text' : 'Prize 12'},
+    {'fillStyle' : '#F4BFBF', 'text' : 'Number 1'},
+    {'fillStyle' : '#81B214', 'text' : 'Number 2'},
+    {'fillStyle' : '#827397', 'text' : 'Number 3'},
+    {'fillStyle' : '#F9B208', 'text' : 'Number 4'},
+    {'fillStyle' : '#C2DED1', 'text' : 'Number 5'},
+    {'fillStyle' : '#CDC2AE', 'text' : 'Number 6'},
+    {'fillStyle' : '#440047', 'text' : 'Number 7'},
+    {'fillStyle' : '#92B4EC', 'text' : 'Number 8'},
+    {'fillStyle' : '#FFD24C', 'text' : 'Number 9'},
+    {'fillStyle' : '#F47C7C', 'text' : 'Number 10'},
+    {'fillStyle' : '#242F9B', 'text' : 'Number 11'},
+    {'fillStyle' : '#FF2442', 'text' : 'Number 12'},
+    {'fillStyle' : '#00FFAB', 'text' : 'Number 13'},
+    {'fillStyle' : '#4B8673', 'text' : 'Number 14'},
+    {'fillStyle' : '#FF06B7', 'text' : 'Number 15'},
+    {'fillStyle' : '#EEEEEE', 'text' : 'Number 16'},
+    {'fillStyle' : '#CAD315', 'text' : 'Number 17'},
+    {'fillStyle' : '#A760FF', 'text' : 'Number 18'},
+    {'fillStyle' : '#235952', 'text' : 'Number 19'},
+    {'fillStyle' : '#F9CEEE', 'text' : 'Number 20'},
     ],
     'animation' :           // Specify the animation to use.
     {
@@ -195,18 +207,26 @@ number.addEventListener('change', (e)=>{
         'textFontSize' : 10,    // Set font size as desired.
         'segments'     :        // Define segments including colour and text.
         [
-        {'fillStyle' : '#eae56f', 'text' : 'Prize 1'},
-        {'fillStyle' : '#89f26e', 'text' : 'Prize 2'},
-        {'fillStyle' : '#7de6ef', 'text' : 'Prize 3'},
-        {'fillStyle' : '#e7706f', 'text' : 'Prize 4'},
-        {'fillStyle' : '#eae56f', 'text' : 'Prize 5'},
-        {'fillStyle' : '#89f26e', 'text' : 'Prize 6'},
-        {'fillStyle' : '#7de6ef', 'text' : 'Prize 7'},
-        {'fillStyle' : '#e7706f', 'text' : 'Prize 8'},
-        {'fillStyle' : '#e7706f', 'text' : 'Prize 9'},
-        {'fillStyle' : '#eae56f', 'text' : 'Prize 10'},
-        {'fillStyle' : '#89f26e', 'text' : 'Prize 11'},
-        {'fillStyle' : '#7de6ef', 'text' : 'Prize 12'},
+            {'fillStyle' : '#F4BFBF', 'text' : 'Number 1'},
+            {'fillStyle' : '#81B214', 'text' : 'Number 2'},
+            {'fillStyle' : '#827397', 'text' : 'Number 3'},
+            {'fillStyle' : '#F9B208', 'text' : 'Number 4'},
+            {'fillStyle' : '#C2DED1', 'text' : 'Number 5'},
+            {'fillStyle' : '#CDC2AE', 'text' : 'Number 6'},
+            {'fillStyle' : '#440047', 'text' : 'Number 7'},
+            {'fillStyle' : '#92B4EC', 'text' : 'Number 8'},
+            {'fillStyle' : '#FFD24C', 'text' : 'Number 9'},
+            {'fillStyle' : '#F47C7C', 'text' : 'Number 10'},
+            {'fillStyle' : '#242F9B', 'text' : 'Number 11'},
+            {'fillStyle' : '#FF2442', 'text' : 'Number 12'},
+            {'fillStyle' : '#00FFAB', 'text' : 'Number 13'},
+            {'fillStyle' : '#4B8673', 'text' : 'Number 14'},
+            {'fillStyle' : '#FF06B7', 'text' : 'Number 15'},
+            {'fillStyle' : '#EEEEEE', 'text' : 'Number 16'},
+            {'fillStyle' : '#CAD315', 'text' : 'Number 17'},
+            {'fillStyle' : '#A760FF', 'text' : 'Number 18'},
+            {'fillStyle' : '#235952', 'text' : 'Number 19'},
+            {'fillStyle' : '#F9CEEE', 'text' : 'Number 20'},
         ],
         'animation' :           // Specify the animation to use.
         {
