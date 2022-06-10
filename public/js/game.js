@@ -146,7 +146,12 @@ function alertPrize(indicatedSegment)
 {
     // Do basic alert of the segment text.
     // You would probably want to do something more interesting with this information.
-    alert("You have won " + indicatedSegment.text);
+    //alert("You have won " + indicatedSegment.text);
+    Swal.fire({
+        icon: 'success',
+        title: 'Lucky Number Is:',
+        text: indicatedSegment.text
+    })
 }
 
 // =======================================================================================================================
