@@ -71,8 +71,7 @@ close.addEventListener('click', ()=>{
 
 const exit = document.getElementById("btnExit")
 exit.addEventListener('click', function(){
-    alert('ll')
-    //window.location.href = "/";
+    window.location.href = "/";
 })
 
 /* ===================================== */
